@@ -13,7 +13,7 @@ public class DBConnector {
     public static Connection getConnection() {
         Connection connection = null;
         try {
-            Class.forName("com.mysql.cj.jdbc.Driver");
+            Class.forName("org.postgresql.Driver");
             connection = DriverManager.getConnection(url, username, password);
         } catch (SQLException | ClassNotFoundException e) {
             e.printStackTrace();
